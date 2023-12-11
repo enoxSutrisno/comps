@@ -1,34 +1,33 @@
-import Button from "./Button"
-import { CgArrowTopLeftR, CgArrowsExpandLeftAlt } from "react-icons/cg";
+import Accordion from "./componets/Accordion"
+
 
 
 function App() {
-  const handleClick = () => {
-    console.log('click')
-  }
-  return (
-    <div>
-      <div>
-        <Button primary rounded onClick={handleClick}>
-          <CgArrowTopLeftR />
-          Clcik</Button>
-      </div>
 
-      <div>
-        <Button secondary outline onMouseLeave={handleClick}>
-          <CgArrowsExpandLeftAlt />
-          buy now</Button>
-      </div>
-      <div>
-        <Button success outline>see deal</Button>
-      </div>
-      <div>
-        <Button warning outline>hide ads</Button>
-      </div>
-      <div>
-        <Button danger outline>somethng</Button>
-      </div>
-    </div>
+  const items = [
+    {
+      id: 'l2kj5',
+      label: 'Can I use React on a project?',
+      content: 'You can use React on any project You can use React on any project You can use React on any project You can use React on any project'
+
+    },
+    {
+      id: 'lksduh12',
+      label: 'Can I use JS on a project?',
+      content: 'You can use JS on any project You can use JS on any project You can use React on any project You can use React on any project'
+
+    },
+    {
+      id: 'likasdwe12',
+      label: 'Can I use CSS on a project?',
+      content: 'You can use CSS on any project You can use CSS on any project You can use React on any project You can use React on any project'
+
+    },
+  ]
+
+
+  return (
+    <Accordion items={items} />
   )
 }
 
